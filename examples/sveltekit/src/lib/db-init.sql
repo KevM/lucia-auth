@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS public.session;
-DROP TABLE IF EXISTS public.user;
+--DROP TABLE IF EXISTS public.session;
+--DROP TABLE IF EXISTS public.user;
 
 CREATE TABLE public.user (
 	id UUID DEFAULT extensions.uuid_generate_v4() PRIMARY KEY,
