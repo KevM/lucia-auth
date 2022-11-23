@@ -5,8 +5,7 @@ CREATE TABLE public.user (
 	id UUID DEFAULT extensions.uuid_generate_v4() PRIMARY KEY,
 	provider_id TEXT NOT NULL UNIQUE,
 	hashed_password TEXT NULL,
-  username TEXT NOT NULL UNIQUE,
-	roles TEXT NOT NULL
+    username TEXT NOT NULL UNIQUE
 );
 
 CREATE TABLE public.session (

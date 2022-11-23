@@ -11,8 +11,7 @@ export const GET: RequestHandler = async (event) => {
   const user =
 		existingUser ||
 		(await createUser({
-			username: providerUser.name,
-      roles: 'teacher' //todo add role picker for new user creation. e.g. student detector?
+			username: providerUser.name
 		}));
 
   const session = await auth.createSession(user.userId);

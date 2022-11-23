@@ -12,8 +12,7 @@ export const auth = lucia({
 		const roles = userData.roles.split(',');
 		return {
 			userId: userData.id,
-			username: userData.username,
-			roles: roles
+			username: userData.username
 		};
 	}
 });
