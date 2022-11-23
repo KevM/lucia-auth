@@ -24,6 +24,10 @@ You'll need to obtain a [Google OAuth authorization credentials](https://develop
   * Click Create. 
   * Copy the Client ID, and Client Secret to your .env file.
 
+#### `$lib/server/Lucia.ts`
+
+You will need the `redirectUri` to be correct in `/src/lib/server/lucia.ts` for your development server.
+
 ### Environment variables
 
 You can create a `.env` file at the root of your project or use your OS environment.
