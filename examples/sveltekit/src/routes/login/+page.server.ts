@@ -1,5 +1,5 @@
 import { invalid, type Actions } from '@sveltejs/kit';
-import { auth } from '$lib/server/lucia';
+import { auth, googleAuth } from '$lib/server/lucia';
 
 export const actions: Actions = {
 	default: async ({ request, locals }) => {
@@ -39,6 +39,11 @@ import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ locals }) => {
 	const session = await locals.getSession();
+	const googleAuthorizationUrl = googleAuth.getAuthorizationUrl();
+
 	if (session) throw redirect(302, '/');
-	return {};
+
+	return { 
+		googleAuthorizationUrl: googleAuthorizationUrl
+	};
 };

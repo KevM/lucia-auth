@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import type { PageData } from './$types';
 
+	export let data: PageData;
 	export let form: { message?: string };
 </script>
 
@@ -23,5 +25,9 @@
 	<input type="password" id="password" name="password" /><br />
 	<input type="submit" value="Continue" class="button" />
 </form>
+
+<hr/>
+<a href={data.googleAuthorizationUrl} class="button">Sign in with Google</a>
+
 <p class="error">{form?.message || ''}</p>
 <a href="/signup" class="link">Create a new account</a>

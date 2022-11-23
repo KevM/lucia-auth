@@ -6,6 +6,7 @@ export const actions: Actions = {
 		const form = await request.formData();
 		const username = form.get('username');
 		const password = form.get('password');
+		const roles = 'teacher';
 		if (!username || !password || typeof username !== 'string' || typeof password !== 'string') {
 			return invalid(400, {
 				message: 'Invalid input'
@@ -15,7 +16,8 @@ export const actions: Actions = {
 			const user = await auth.createUser('username', username, {
 				password,
 				attributes: {
-					username
+					username,
+					roles
 				}
 			});
 			const session = await auth.createSession(user.userId);

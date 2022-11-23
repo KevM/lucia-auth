@@ -5,11 +5,6 @@
 </script>
 
 <p>This page is protected and can only be accessed by authenticated users.</p>
-<ul>
-	<li>{$user?.userId}</li>
-	<li>{$user?.username}</li>
-	<li>{JSON.stringify($user?.roles)}</li>
-</ul>
 <pre class="code">
 {JSON.stringify($user, null, 2)}
 </pre>

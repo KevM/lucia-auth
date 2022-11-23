@@ -35,8 +35,9 @@
 	"type": "module",
 	"dependencies": {
 		"@lucia-auth/adapter-supabase": "latest",
-		"lucia-auth": "latest",
+		"@lucia-auth/oauth": "^0.1.6",
 		"@lucia-auth/sveltekit": "latest",
-		"devalue": "^4.0.1"
+		"devalue": "^4.0.1",
+		"lucia-auth": "^0.2.0"
 	}
 }
