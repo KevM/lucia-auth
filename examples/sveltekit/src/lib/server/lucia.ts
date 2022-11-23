@@ -9,9 +9,7 @@ export const auth = lucia({
 	env: dev ? 'DEV' : 'PROD',
 	sessionTimeout: 1000 * 5,
 	transformUserData: (userData) => {
-		console.log('userData', userData);
 		const roles = userData.roles.split(',');
-		console.log('roles', roles);
 		return {
 			userId: userData.id,
 			username: userData.username,
